@@ -3,6 +3,8 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{ shop.locale }}"> <!--<![endif]-->
 
 <head>
+<!-- ROIHunterEasy HeadSnippet start -->{% include 'roi_hunter_easy_head_snippet' %}<!-- ROIHunterEasy HeadSnippet end -->
+
 
   <meta charset="utf-8">
   <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
@@ -123,6 +125,7 @@
 </head>
 
 <body class="oars_1 {% if template == "index" %}index-template{% endif %} {% if customer %}loggedin{% endif %}">
+<!-- ROIHunterEasy BodySection start -->{{ 'roi_hunter_easy_body_section.js' | asset_url | script_tag }}<!-- ROIHunterEasy BodySection end -->
   {% if settings.mailing_list_active %}
   {% include 'newsletter-popup' %}  
   {% endif %}
@@ -210,17 +213,18 @@
 
   {% include 'quick-shop' %}
   {% include 'currencies' %}
-  <!-- {% include 'ajax-cart' %} -->
+  {% include 'ajax-cart' %} 
   {% include 'lightbox-search' %}
   {% include 'lightbox-wishlist' %}
-  {% include 'lightbox-compare' %}
+ <!-- {% include 'lightbox-compare' %} -->
+
   {% if settings.search_auto %}
   {% include 'search-autocomplete' %}
   {% endif %}
 
   {{ 'linkOptionSelectors.js' | asset_url | script_tag }}
 
-  {% include 'ajaxify-cart' %}
+  <!-- {% include 'ajaxify-cart' %}-->
 
 </body>
 
